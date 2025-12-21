@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/main.css">
+  <title>Product list with cart</title>
+</head>
+<body>
+    <div class="container">
+      <main>
+
+        <div class="product-cards-and-cart">
+
+          <!----- product-section ----->
+          <section class="products">
+            <h1>Desserts</h1>
+
+            <div class="product-cards">
+
+              <!---- item-card-1 ---->
+              <article class="item-card">
+                <div class="product-card-content">
+                  <!---- card-images ---->
+                    <img class="product-image" src="./public/assets/images/image-waffle-mobile.jpg" alt="image of waffle">
+                    <img class="product-image-tablet" src="./public/assets/images/image-waffle-tablet.jpg" alt="image of waffle">
+                    <img class="product-image-desktop" src="./public/assets/images/image-waffle-desktop.jpg" alt="">
+                  <!---- card-images ---->
+
+                  
+
+                  <!---- cart button ---->
+                  <div class="cart-btn-content">
+                      <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+                  <!-- quantity-content -->
+                    <div class="quantity-content">
+                      <div class="quantity-btn">
+                        <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                        <span id="output">0</span>
+                        <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                      </div>
+                    </div>
+                  <!-- quantity-content -->
+                  </div>
+                <!---- cart button ---->
+                  <div class="card-text-content">
+                    <h4>Waffle</h4>
+                    <p>Waffle with Berries</p>
+                    <p style="color: #C73B0F;">$6.50</p>
+                  </div>
+                </div>
+              </article>
+            <!---- item-card-1 ---->
+
+
+
+            <!---- item-card-2 ---->
+              <article class="item-card">
+                <div class="product-card-content">
+                  <!---- card images ---->
+                  <img class="product-image" src="./public/assets/images/image-creme-brulee-mobile.jpg" alt="image of creme-brulee-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-creme-brulee-tablet.jpg" alt="image of creme-brulee">
+                  <img class="product-image-desktop" src="./public/assets/images/image-creme-brulee-desktop.jpg" alt="image of creme-brulee">
+                  <!---- card images ---->
+
+                  <!---- cart button ---->
+                  <div class="cart-btn-content">
+                      <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg">Add to Cart</button>
+                  <!---- quantity content ---->
+                    <div class="quantity-content">
+                      <div class="quantity-btn">
+                        <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                        <span id="output">0</span>
+                        <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                      </div>
+                    </div>
+                  <!---- quantity content ---->
+                  </div>
+                <!---- cart button ---->
+
+                  <div class="card-text-content">
+                    <h4>Crème Brûlée</h4>
+                    <p>Vanilla Bean Crème Brûlée</p>
+                    <p style="color: #C73B0F;">$7.00</p>
+                  </div>
+                </div>
+              </article>
+            <!---- item-card-2 ---->
+
+
+
+            <!---- item-card-3 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!---- card images ---->
+                  <img class="product-image" src="./public/assets/images/image-macaron-mobile.jpg" alt="image of of macaron-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-macaron-tablet.jpg" alt="image of macaron">
+                  <img class="product-image-desktop" src="./public/assets/images/image-macaron-desktop.jpg" alt="image of macaron">
+                <!---- card images ---->
+
+
+                <!---- cart-btn ---->
+                <div class="cart-btn-content">
+                    <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+                <!---- quantity-content ---->
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!---- cart-btn ---->
+                <div class="card-text-content">
+                  <h4>Macaron</h4>
+                  <p>Macaron Mix of Five</p>
+                  <p style="color: #C73B0F;">$8.00</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-3 ---->
+
+          
+
+          <!---- item-card-4 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!---- card-images ---->
+                  <img class="product-image" src="./public/assets/images/image-tiramisu-mobile.jpg" alt="image of tiramisu-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-tiramisu-tablet.jpg" alt="image of tiramisu">
+                  <img class="product-image-desktop" src="./public/assets/images/image-tiramisu-desktop.jpg" alt="image of tiramisu">
+                <!---- card-images ---->
+
+              <!---- cart btn ---->
+                <div class="cart-btn-content">
+                  <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+                <!---- quantity-content ---->
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!---- cart-btn ---->
+                <div class="card-text-content">
+                  <h4>Tiramisu</h4>
+                  <p>Classic Tiramisu</p>
+                  <p style="color: #C73B0F;">$5.50</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-4 ---->
+
+
+          <!---- item-card-5 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!----- card-images ----->
+                  <img class="product-image" src="./public/assets/images/image-baklava-mobile.jpg" alt="image of baklava-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-baklava-tablet.jpg" alt="image of baklava">
+                  <img class="product-image-desktop" src="./public/assets/images/image-baklava-desktop.jpg" alt="image of baklava">
+                <!----- card-images ----->
+
+
+                <!----- cart-btn ----->
+                <div class="cart-btn-content">
+                    <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+                <!---- quantity-content ---->    
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!----- cart-btn ----->
+                <div class="card-text-content">
+                  <h4>Baklava</h4>
+                  <p>Pistachio Baklava</p>
+                  <p style="color: #C73B0F;">$4.00</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-5 ---->
+
+
+          <!---- item-card-6 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!---- card-images ---->
+                  <img class="product-image" src="./public/assets/images/image-meringue-mobile.jpg" alt="image of meringue-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-meringue-tablet.jpg" alt="image of meringue">
+                  <img class="product-image-desktop" src="./public/assets/images/image-meringue-desktop.jpg" alt="image of meringue">
+                <!---- card-images ---->
+
+
+                <!---- cart-btn ---->
+                  <div class="cart-btn-content">
+                    <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+                  <!---- quantity-content ---->
+                    <div class="quantity-content">
+                      <div class="quantity-btn">
+                        <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                        <span id="output">0</span>
+                        <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                      </div>
+                    </div>
+                  <!---- quantity-content ---->
+                  </div>
+                <!---- cart-btn ---->
+                <div class="card-text-content">
+                  <h4>Pie</h4>
+                  <p>Lemon Meringue Pie</p>
+                  <p style="color: #C73B0F;">$5.00</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-6 ---->
+
+
+
+          <!---- item-card-7 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!---- card-images ----->
+                  <img class="product-image" src="./public/assets/images/image-cake-mobile.jpg" alt="image of cake-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-cake-tablet.jpg" alt="image of cake">
+                  <img class="product-image-desktop" src="./public/assets/images/image-cake-desktop.jpg" alt="image of cake">
+                <!---- card-images ----->
+
+
+                <!---- cart-btn ----->
+                <div class="cart-btn-content">
+                  <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+
+                <!---- quantity-content ---->
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!---- cart-btn ----->
+                <div class="card-text-content">
+                  <h4>Cake</h4>
+                  <p>Red Velvet Cake</p>
+                  <p style="color: #C73B0F;">$4.50</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-7 ---->
+
+
+
+          <!---- item-card-8 ---->
+            <article class="item-card">
+              <div class="product-card">
+                <!----- card-images ----->
+                  <img class="product-image" src="./public/assets/images/image-brownie-mobile.jpg" alt="image of brownie-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-brownie-tablet.jpg" alt="image of brownie">
+                  <img class="product-image-desktop" src="./public/assets/images/image-brownie-desktop.jpg" alt="image of brownie">
+                <!----- card-images ----->
+
+
+                <!----- cart-btn ----->
+                <div class="cart-btn-content">
+                  <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!----- cart-btn ----->
+                <div class="card-text-content">
+                  <h4>Brownie</h4>
+                  <p>Salted Caramel Brownie</p>
+                  <p style="color: #C73B0F;">$4.50</p>
+                </div>
+              </div>
+            </article>
+          <!---- item-card-8 ---->
+
+
+
+          <!---- item-card-9 ---->
+            <article class="item-card">
+              <div class="product-card-content">
+                <!----- card-images ----->
+                  <img class="product-image" src="./public/assets/images/image-panna-cotta-mobile.jpg" alt="image of panna-cotta-mobile">
+                  <img class="product-image-tablet" src="./public/assets/images/image-panna-cotta-tablet.jpg" alt="image of panna-cotta">
+                  <img class="product-image-desktop" src="./public/assets/images/image-panna-cotta-desktop.jpg" alt="image of panna-cotta">
+                <!----- card-images ----->
+
+
+                <!----- cart-btn ----->
+                <div class="cart-btn-content">
+                  <button class="cart-btn"><img src="./public/assets/icons/icon-add-to-cart.svg" alt="add-to-cart-icon">Add to Cart</button>
+
+                <!---- quantity-content ---->
+                  <div class="quantity-content">
+                    <div class="quantity-btn">
+                      <button class="decrease-btn"><i class="bi bi-dash-circle"></i></button>
+                      <span id="output">0</span>
+                      <button class="increase-btn"><i class="bi bi-plus-circle"></i></button>
+                    </div>
+                  </div>
+                <!---- quantity-content ---->
+                </div>
+              <!----- cart-btn ----->
+              <div class="card-text-content">
+                <h4>Panna Cotta</h4>
+                <p>Vanilla Panna Cotta</p>
+                <p style="color: #C73B0F;">$6.50</p>
+              </div>
+              </div>
+            </article>
+
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+</body>
+</html>
