@@ -11,6 +11,14 @@ h1 {
   margin-top: 0;
 }
 
+h2 {
+  font-size: 24px;
+  color: #C73B0F;
+  font-weight: 700;
+  padding-bottom: 24px;
+  margin: 0;
+}
+
 h4 {
   font-size: 14px;
   font-weight: 400;
@@ -95,6 +103,12 @@ span {
   color: #fff;
 }
 
+.input {
+  font-size: 24px;
+  color: #C73B0F;
+  font-weight: 700;
+}
+
 /**** components ****/
 
 
@@ -127,6 +141,8 @@ body {
   flex-wrap: wrap;
 }
 
+
+/*** product-section ***/
 .product-cards {
   display: flex;
   flex-wrap: wrap;
@@ -149,6 +165,44 @@ body {
 .card-text-content {
   margin-top: 24px;
 }
+
+/*** product-section ***/
+
+
+
+/*** cart-section ***/
+
+.cart-section {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 32px;
+  width: 93%;
+}
+
+.cart-text-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.cart-placeholder-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px;
+}
+
+.cart-image {
+  margin-bottom: 16px;
+  width: 45%;
+}
+
+/*** cart-section ***/
+
+
+
 
 
 
@@ -184,6 +238,9 @@ body {
     gap: 24px;
   }
 
+
+  /**** product-section ****/
+
   .item-card {
     width: 31%;
   }
@@ -197,9 +254,35 @@ body {
     box-shadow: 3px 5px 9px -6px black;
   }
 
+  /**** product-section ****/
+
+
+
+
+  /*** cart-section ***/
+
+  .cart-section {
+    width: 93%;
+    margin-top: 24px;
+  }
+
+  .cart-placeholder-content {
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .cart-image {
+    width: 20%;
+  }
+
+  /*** cart-section ***/
 }
 
 /**** media queries tablet ****/
+
 
 
 
@@ -213,6 +296,11 @@ body {
     position: relative;
     left: -26px;
   }
+
+  /**** components ****/
+
+  
+
   
   /**** body ****/
 
@@ -235,6 +323,8 @@ body {
     justify-content: center;
   }
 
+  /*** product-section ***/
+  
   .products {
     width: 65%;
   }
@@ -250,6 +340,24 @@ body {
     width: 100%;
     display: block;
   }
+
+  /*** product-section ***/
+
+
+
+  /*** cart-section ***/
+
+  .cart-section {
+    padding: 24px;
+    width: 22%;
+    height: 230px;
+  }
+
+  .cart-image {
+    width: 30%;
+  }
+
+  /*** cart-section ***/
 }
 
 
