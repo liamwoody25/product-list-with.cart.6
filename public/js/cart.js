@@ -185,7 +185,7 @@ function updateCart() {
   }
 }
 
-updateCart()
+
  
 
 
@@ -224,8 +224,8 @@ for(let i = 0; i < cartSubmit.length; i++){
 // this event listener is for the increase button when it is clicked it makes the number go up
 for (let i = 0 ; i < insertBtn.length; i++) {
   insertBtn[i].addEventListener('click', function(){
-    addItemToCart(cartProducts[i],[i])
-    updateProduct(cartProducts[i],[i])
+    // addItemToCart(cartProducts[i],[i])
+    updateProduct(cartProducts[i], [i])
   })
 }
 
