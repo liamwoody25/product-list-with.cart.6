@@ -155,12 +155,17 @@ function addItemToCart(cartProduct,[i]){
 
 
 function updateProduct(cartProduct) {
-  console.log('my product is', cartProduct)
+  let items = localStorage.getItem('cartProductInCart')
+  items = JSON.parse(items)
+  console.log('my items are', items)
+
   
-  let items = {
-    [cartProduct.category]: cartProduct
-  }
-  cartProduct.inCart = 1
+    cartProduct.inCart = 1
+    items = {
+      [cartProduct.category]: cartProduct
+    }
+  
+ 
   localStorage.setItem('cartProductInCart', JSON.stringify(cartProduct))
 
 }
@@ -219,7 +224,8 @@ for(let i = 0; i < cartSubmit.length; i++){
 // this event listener is for the increase button when it is clicked it makes the number go up
 for (let i = 0 ; i < insertBtn.length; i++) {
   insertBtn[i].addEventListener('click', function(){
-    addItemToCart(i)
+    addItemToCart(cartProducts[i],[i])
+    updateProduct(cartProducts[i],[i])
   })
 }
 
