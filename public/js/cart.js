@@ -9,24 +9,24 @@ const deleteBtn =  document.querySelectorAll('.decrease-btn');
 
 let cartProducts = [
       {
-      //  "image": {
-      //       "thumbnail": "./assets/images/image-waffle-thumbnail.jpg",
-      //       "mobile": "./assets/images/image-waffle-mobile.jpg",
-      //       "tablet": "./assets/images/image-waffle-tablet.jpg",
-      //       "desktop": "./assets/images/image-waffle-desktop.jpg"
-      //  },
+       "image": {
+            "thumbnail": "./assets/images/image-waffle-thumbnail.jpg",
+            "mobile": "./assets/images/image-waffle-mobile.jpg",
+            "tablet": "./assets/images/image-waffle-tablet.jpg",
+            "desktop": "./assets/images/image-waffle-desktop.jpg"
+       },
        "name": "Waffle with Berries",
        "category": "Waffle",
        "price": 6.50,
        "inCart": 0
     },
     {
-        // "image": {
-        //     "thumbnail": "./assets/images/image-creme-brulee-thumbnail.jpg",
-        //     "mobile": "./assets/images/image-creme-brulee-mobile.jpg",
-        //     "tablet": "./assets/images/image-creme-brulee-tablet.jpg",
-        //     "desktop": "./assets/images/image-creme-brulee-desktop.jpg"
-        // },
+        "image": {
+            "thumbnail": "./assets/images/image-creme-brulee-thumbnail.jpg",
+            "mobile": "./assets/images/image-creme-brulee-mobile.jpg",
+            "tablet": "./assets/images/image-creme-brulee-tablet.jpg",
+            "desktop": "./assets/images/image-creme-brulee-desktop.jpg"
+        },
        "name": "Vanilla Bean Crème Brûlée",
         "category": "Crème Brûlée",
         "price": 7.00,
@@ -122,7 +122,7 @@ let cartProducts = [
 
 // this function sends the item to the cart
 function addItemToCart(cartProduct,[i]){
-  const output = document.querySelectorAll('#output')[i];
+  const output = document.querySelectorAll('#quantity-output')[i];
   const result = Number(output.innerText) + 1;
 
   let productItem = localStorage.getItem('addItemToCart')
@@ -159,7 +159,12 @@ function updateProduct(cartProduct) {
   items = JSON.parse(items)
   console.log('my items are', items)
 
-  
+
+  if (items != null) {
+    items[cartProduct.category].inCart += 1;
+  } else {
+    
+  }
     cartProduct.inCart = 1
     items = {
       [cartProduct.category]: cartProduct
@@ -193,7 +198,7 @@ function updateCart() {
 
 // this function removes an item from the cart
 function removeItemFromCart(i) {
-  const output = document.querySelectorAll('#output')[i];
+  const output = document.querySelectorAll('#quantity-output')[i];
   const result = Number(output.innerText) - 1;
 
   if (result < 0 ) {
@@ -224,8 +229,7 @@ for(let i = 0; i < cartSubmit.length; i++){
 // this event listener is for the increase button when it is clicked it makes the number go up
 for (let i = 0 ; i < insertBtn.length; i++) {
   insertBtn[i].addEventListener('click', function(){
-    // addItemToCart(cartProducts[i],[i])
-    updateProduct(cartProducts[i], [i])
+    addItemToCart(cartProducts[i],[i])
   })
 }
 
