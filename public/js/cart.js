@@ -169,9 +169,6 @@ function updateProduct(cartProduct) {
     items = {
       [cartProduct.category]: cartProduct
     }
-  
- 
-  localStorage.setItem('cartProductInCart', JSON.stringify(cartProduct))
 
 }
 
