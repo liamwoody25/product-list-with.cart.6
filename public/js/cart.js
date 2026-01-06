@@ -150,27 +150,29 @@ function addItemToCart(cartProduct,[i]){
     document.getElementById('cart-output').textContent = 1;
    }
 
-   updateProduct(cartProduct)
+  updateCart(cartProduct)
 }
 
 
-function updateProduct(cartProduct) {
-  let items = localStorage.getItem('cartProductInCart')
-  items = JSON.parse(items)
-  console.log('my items are', items)
 
 
-  if (items != null) {
-    items[cartProduct.category].inCart += 1;
-  } else {
+// function updateProduct(cartProduct) {
+//   let items = localStorage.getItem('cartProductInCart')
+//   items = JSON.parse(items)
+//   console.log('my items are', items)
+
+
+//   if (items != null) {
+//     items[cartProduct.category].inCart += 1;
+//   } else {
     
-  }
-    cartProduct.inCart = 1
-    items = {
-      [cartProduct.category]: cartProduct
-    }
+//   }
+//     cartProduct.inCart = 1
+//     items = {
+//       [cartProduct.category]: cartProduct
+//     }
 
-}
+// }
 
 
 
@@ -179,12 +181,28 @@ function updateProduct(cartProduct) {
 
 
 // this function is for when the cart is being updated 
-function updateCart() {
+function updateCart(cartProduct) {
   let productItem = localStorage.getItem('addItemToCart');
 
   if (productItem){
     document.getElementById('cart-output').textContent = productItem;
   }
+
+  let items = localStorage.getItem('cartProductInCart')
+  items = JSON.parse(items)
+
+  if (items !== null) {
+    items[cartProducts.category].inCart += 1
+  } else {
+     cartProduct.inCart = 1
+    items = {
+      [cartProduct.category]: cartProduct
+    }
+  }
+ 
+
+  localStorage.setItem('cartproductInCart', JSON.stringify(items))
+  console.log('my items are', items)
 }
 
 
@@ -198,6 +216,7 @@ function removeItemFromCart(i) {
   const output = document.querySelectorAll('#quantity-output')[i];
   const result = Number(output.innerText) - 1;
 
+
   if (result < 0 ) {
     result = 0
   }
@@ -209,6 +228,10 @@ function removeItemFromCart(i) {
     imageCard[i].style.border = 'none'
     imgCard[i].style.border = 'none'
     cardImage[i].style.border = 'none'
+
+  
+    
+    
   }
 }
 
